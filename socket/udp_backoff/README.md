@@ -10,10 +10,6 @@ After ensuring that Python3 is set up, follow the below steps:
 - Clone the repository into a desired location:
   
       $ git clone https://github.com/vuusale/udp_backoff.git
-      
-- Install the requirements:
-  
-      $ pip install -r requirements
   
 Now you are ready to run the program. 
   
