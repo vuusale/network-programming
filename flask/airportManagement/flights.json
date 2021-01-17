@@ -1,0 +1,42 @@
+[
+    {
+        "from_city": "Baku",
+        "to_city": "Gandja",
+        "departure_date": "29.12.2020 13:00",
+        "arrival_date": "29.12.2020 14:00",
+        "passenger_num": "100",
+        "airplane_info": "Boeing"
+    },
+    {
+        "from_city": "Naxchivan",
+        "to_city": "Gabala",
+        "departure_date": "05.01.2021 16:00",
+        "arrival_date": "05.01.2021 20:00",
+        "passenger_num": "120",
+        "airplane_info": "Bell"
+    },
+    {
+        "from_city": "Mingachevir",
+        "to_city": "Lankaran",
+        "departure_date": "02.01.2021 23:00",
+        "arrival_date": "03.01.2021 02:00",
+        "passenger_num": "140",
+        "airplane_info": "Airbus"
+    },
+    {
+        "from_city": "Agstafa",
+        "to_city": "Khodjali",
+        "departure_date": "01.01.2021 14:00",
+        "arrival_date": "01.01.2021 16:00",
+        "passenger_num": "250",
+        "airplane_info": "Boeing"
+    },
+    {
+        "from_city": "Baku",
+        "to_city": "Tovuz",
+        "departure_date": "08.01.2021 13:00",
+        "arrival_date": "08.01.2021 15:00",
+        "passenger_num": "140",
+        "airplane_info": "Airbus"
+    }
+]

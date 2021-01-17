@@ -1,0 +1,88 @@
+#flights: from_city, to_city, departure_date, arrival_date, passenger_num, airplane_info
+#users: admin, user
+#1) Template
+
+Flights: {
+    flight_id: {
+        from_city: string,
+        to_city: string,
+        departure_date: string,
+        arrival_date: string,
+        passenger_num: integer,
+        airplane_info: string
+    }
+}
+
+#2) Use-cases
+
+1. List of flights based on from and to city
+2. Create, update, delete flights having admin token
+
+#3) HTTP Methods
+    GET, POST, DELETE, PUT
+
+-----------------------------------------------------------------------------------------
+scenario: login as admin
+POST server/authentication_authorization
+
+body {
+    username: string,
+    password: string
+}
+
+response: {token, code: 200}
+-----------------------------------------------------------------------------------------
+scenario: end session
+POST server/end_session
+
+body {
+    token: string
+}
+
+response: {message, code: 200}
+-----------------------------------------------------------------------------------------
+scenario: get all flights based on from and to city
+GET server/flights/from_city/to_city
+
+response: {
+    from_city: string,
+    to_city: string,
+    departure_date: string,
+    arrival_date: string,
+    passenger_num: integer,
+    airplane_info: string
+}
+
+If from_city is null, flights to to_city are returned.
+If to_city is null, flights from from_city are returned.
+If both from_city and to_city are null, all flights are returned.
+-----------------------------------------------------------------------------------------
+scenario: add a new flight
+POST server/flights
+
+body: {
+    from_city: string,
+    to_city: string,
+    departure_date: string,
+    arrival_date: string,
+    passenger_num: integer,
+    airplane_info: string,
+    token: string
+}
+
+response: {body, code: 201}
+-----------------------------------------------------------------------------------------
+scenario: update the flight
+PUT server/Flights
+
+body: {
+    flight_id: integer,
+    token: string
+}
+
+response: {new_body, code: 200}
+-----------------------------------------------------------------------------------------
+scenario: delete the flight
+DELETE sever/flights
+
+response: {code: 204}
